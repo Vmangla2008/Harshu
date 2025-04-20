@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>harshpreet (Vaibhav's Princess)</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: fall 5s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10%;
+        left: calc(100% * var(--x));
+      }
+      100% {
+        top: 110%;
+        left: calc(100% * var(--x));
+      }
+    }
+
+    .big-heart {
+      position: relative;
+      top: 40vh;
+      width: 120px;
+      height: 120px;
+      background-color: #ff3366;
+      transform: rotate(45deg);
+      margin: 0 auto;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 51, 102, 0.8);
+      transition: transform 0.2s;
+      animation: pulse 1s infinite;
+    }
+
+    .big-heart::before,
+    .big-heart::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background-color: #ff3366;
+      border-radius: 50%;
+    }
+
+    .big-heart::before {
+      top: -60px;
+      left: 0;
+    }
+
+    .big-heart::after {
+      left: -60px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1) rotate(45deg);
+      }
+      50% {
+        transform: scale(1.1) rotate(45deg);
+      }
+    }
+
+    .message {
+      font-size: 1.5em;
+      color: #fff;
+      margin-top: 40px;
+      display: none;
+    }
+
+    #slideshow {
+      display: none;
+      margin-top: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    #slideshow img {
+      width: 250px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body onclick="startMusic()">
+
+  <div class="big-heart" onclick="showNextMessage()"></div>
+  <!-- Section 1: Thank you -->
+  <div class="section" id="section1">
+  <div class="message" id="msg1">"There are some people who walk into your life and make it brighter just by being there — and for me, that person is you, Harshpreet. You’ve been more than just a friend. You’ve been my peace, my cheerleader, my safe space, and honestly, the most beautiful blessing I could ask for. From the smallest conversations to the deepest moments we've shared, you’ve added a kind of magic to my life that words can barely capture. Your smile has the power to lift my worst days, and your presence brings me a sense of calm that no one else can. Whether we’re laughing at something silly or talking about life at 2 AM, every second spent with you feels special. You’ve shown me what genuine care looks like, what loyalty truly means, and how rare it is to find someone who simply gets you. Thank you for being patient with me, for listening even when I didn’t know how to express myself, and for never giving up on “us.” You may not realize it, but you've made me a better version of myself just by being in my life. I don’t know what the future holds, but I do know that right now, in this moment, I am incredibly grateful for you. Thank you for being you — perfectly, wonderfully, unapologetically you. You're not just a part of my story, Harshpreet — you are one of the most beautiful chapters. 💖"</div>
+  <a href="#section2" class="scroll-button">Scroll Down</a>
+  </div>
+
+   <!-- Section 2: I'm sorry -->
+   <div class="section" id="section2">
+   <div class="message" id="msg2">"I know I’ve made mistakes… I know there were moments where I hurt you, where I said things I didn’t mean, or went silent when you needed me most. And for all of that, I’m truly sorry from the bottom of my heart. You didn’t deserve the pain I caused — but even then, you didn’t walk away. You chose to stay, to understand me, to hold on, even when it would’ve been easier to let go. That kind of love, that kind of patience, is rare… and you showed it with so much grace. You could’ve shut me out, but instead, you held space for me. You saw the broken parts of me and still decided that I was worth loving. That means more to me than I can ever express. Thank you for being the strong one when I was weak. Thank you for not letting my bad days define what we have. Thank you for believing in me when I struggled to believe in myself. You’ve shown me what unconditional support feels like, and I promise I’ll keep trying to be better — for you, for us. You’re not just someone I love, Harshpreet... you’re someone I never want to lose. Thank you for holding my heart when I didn’t even know how to protect it myself. 💔❤️"</div>
+   <a href="#section3" class="scroll-button">Scroll Down</a>
+   </div>
+
+ <!-- Section 3: I Love You -->
+ <div class="section" id="section3">
+ <div class="message" id="msg3">"There’s no fancy way to say this, no dramatic build-up needed. It’s just the truth — I love you, Harshpreet. I love the way you talk, the way you smile, the way your eyes light up when you're passionate about something. I love your kindness, your strength, your heart. I love the way you make me feel seen, heard, and understood — like I don’t have to pretend to be anything I’m not when I’m with you. Being around you feels like home. You make the ordinary feel magical, and even on my darkest days, you somehow become the light I didn’t know I needed. I don't know how or when it happened exactly… but somewhere between our laughs, our deep talks, and our random moments — I fell for you. Truly. Deeply. Completely. And I’m not afraid to say it anymore. I love you, Harshpreet — not just for who you are, but for how you make me feel about myself when I’m with you. You’re my peace in chaos, my calm in the storm, and the reason my heart beats a little faster. I don’t know what the future holds for us… but I know that this feeling, this love — it’s real. It’s yours. Always. ❤️"</div>
+ <a href="#section4" class="scroll-button">Scroll Down</a>
+ </div>
+
+<!-- Section 4: Take care of yourself -->
+<div class="section" id="section4">
+<div class="message" id="msg4">"You’ve been the strongest one in every room, always holding people together, always putting others before yourself — but let me ask you something, Harshpreet... have you ever paused to take care of you? I’ve seen you smile through pain, lift others while carrying your own weight, and stay quiet just so others wouldn’t feel uncomfortable. That kind of heart… it’s rare. And it’s beautiful. But even the strongest hearts need rest. Even you, the one who’s been everyone’s reason to heal, deserve to be held, to be understood, and to be reminded that your feelings matter too. You’ve done so much for others, and I just want you to know — you don’t always have to be strong. It’s okay to break down. It’s okay to cry. It’s okay to be tired. And when you are, I’ll be here. Not to fix you, not to question you — but just to sit beside you and remind you that you’re not alone. You matter, Harshpreet. Your peace, your happiness, your dreams — they matter. So today, just for once… breathe for you. Choose you. Because you’ve spent so long being everyone’s strength — now let me be yours. 💫"</div>
+<a href="#final" class="scroll-button">Scroll Down</a>
+</div>
+
+<!-- Final Section: Closing Message -->
+<div class="section" id="final">
+    <div class="message">"With Love, Vaibhav 💖"</div>
+  </div>
+
+  <div id="slideshow">
+    <h2 style="color:white;">Our Little Story 📸</h2>
+    <img src="img1.jpg.jpeg" alt="Cute memory">
+    <img src="img2.jpg.jpeg" alt="Another sweet moment">
+    <img src="img3.jpg.jpeg" alt="Forever us">
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Falling hearts
+    for (let i = 0; i < 50; i++) {
+      let heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.setProperty('--x', Math.random());
+      heart.style.animationDuration = `${3 + Math.random() * 5}s`;
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = -Math.random() * 100 + 'px';
+      document.body.appendChild(heart);
+    }
+
+    // Music autoplay on interaction
+    function startMusic() {
+      const music = document.getElementById('bgMusic');
+      music.play();
+      document.body.onclick = null; // Remove once played
+    }
+
+    let currentMessage = 0;
+    function showNextMessage() {
+      currentMessage++;
+      const message = document.getElementById(`msg${currentMessage}`);
+      if (message) {
+        message.style.display = 'block';
+      }
+
+      // After 4th message, show slideshow
+      if (currentMessage === 4) {
+        setTimeout(() => {
+          document.getElementById('slideshow').style.display = 'block';
+        }, 1000);
+      }
+    }
+  </script>
+</body>
+</html>
